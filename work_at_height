@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Permit To Work</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f7f7f7;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    h2 {
+      color: #e74c3c; /* Red */
+      margin-bottom: 20px;
+      font-size: 28px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+    .info div {
+      margin-bottom: 15px;
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      background: #fcf8f7;
+      transition: all 0.3s ease;
+    }
+    .info div:hover {
+      background: #f2d7d5;
+      transform: scale(1.02);
+    }
+    .checklist {
+      margin-bottom: 30px;
+    }
+    .checklist h3 {
+      color: #e74c3c; /* Red */
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+    .checklist ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .checklist li {
+      margin: 12px 0;
+      padding: 15px;
+      background-color: #f9eaea;
+      border-left: 5px solid #e74c3c;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    .checklist li:hover {
+      background-color: #f2d7d5;
+      transform: translateX(10px);
+    }
+    .checklist li span {
+      font-weight: bold;
+      color: #c0392b;
+    }
+    .image-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 30px 0;
+    }
+    .image-container img {
+      width: 30%;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+    .image-container img:hover {
+      transform: scale(1.05);
+    }
+    .approve-btn {
+      display: block;
+      margin: 30px auto;
+      padding: 16px 32px;
+      background-color: #27ae60; /* Green */
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+    .approve-btn:hover {
+      background-color: #2ecc71;
+      transform: scale(1.05);
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background-color: rgba(39, 174, 96, 0.95); /* Green */
+      color: white;
+      padding: 30px 50px;
+      border-radius: 15px;
+      font-size: 22px;
+      text-align: center;
+      animation: popup 0.5s forwards ease;
+      z-index: 999;
+    }
+    @keyframes popup {
+      from {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+      }
+      to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+    }
+    .fade-out {
+      animation: fadeOut 0.5s forwards ease-in-out;
+    }
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Permit To Work</h2>
+  
+  <!-- Info Section -->
+  <div class="info">
+    <div><strong>Name:</strong> Thobias Joel</div>
+    <div><strong>Main Contractor:</strong> NOKIA</div>
+    <div><strong>Permit Type:</strong> WORK AT HEIGHT</div>
+    <div><strong>Work Type:</strong> ACTIVE MAINTENANCE</div>
+    <div><strong>Description:</strong> Preventive Maintenance</div>
+    <div><strong>Site Name:</strong> Kibangu_Novo, Dar-es-salaam</div>
+    <div><strong>Start Time:</strong> 25 Sep 24, 13:16</div>
+    <div><strong>End Time:</strong> 25 Sep 24, 14:16</div>
+    <div><strong>Health & Safety Officer:</strong> Abdulla Mussa</div>
+  </div>
+  
+  <!-- Checklist Section -->
+  <div class="checklist">
+    <h3>Checklist</h3>
+    <ul>
+      <li><span>Scope Of Work:</span> Arrive at site, HSE preparation, climb Tower</li>
+      <li><span>Hazards:</span> Falling Objects, Risk Of Falling, Unguarded Edges</li>
+      <li><span>Height Hazards:</span> Ladders, Scaffolding, Working on Elevated Surface</li>
+      <li><span>Approx. Work Height:</span> 40m</li>
+      <li><span>Work Area Inspection:</span> Every 15 minutes</li>
+    </ul>
+  </div>
+
+  <!-- Image Section -->
+  <div class="image-container">
+    <img src="file:///B:/DOWNLOADS/ee.jpg" alt="Site Image 1">
+    <img src="file:///B:/DOWNLOADS/enhe.jpg" alt="Site Image 2">
+    <img src="file:///B:/DOWNLOADS/eeee.jpg" alt="Site Image 3">
+  </div>
+  
+  <!-- Approve Button -->
+  <button class="approve-btn" onclick="showPopup()">Approve</button>
+</div>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+  Approved!
+</div>
+
+<script>
+  function showPopup() {
+    var popup = document.getElementById('popup');
+    popup.style.display = 'block';
+    popup.classList.remove('fade-out');
+    setTimeout(() => {
+      popup.classList.add('fade-out');
+      setTimeout(() => {
+        popup.style.display = 'none';
+      }, 500); // Fade out after animation
+    }, 2000); // Keep the popup for 2 seconds
+  }
+</script>
+
+</body>
+</html>
